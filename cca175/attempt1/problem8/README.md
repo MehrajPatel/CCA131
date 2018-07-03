@@ -1,11 +1,10 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 8: 
+Spark read from text file and do reduceByKey for RDD
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+  * /loudacre/weblogs/ logs for web access. Format "ip - id [time] "request" "browser"".
+  * Count access for each IP. Create data as "ip,count".
+  * Output as text file delimited by comma (",").
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+  * Save to directory /user/training/problem8/solution.
+  * File should be in text format delimieted by commma (",").
+  * No compression.
