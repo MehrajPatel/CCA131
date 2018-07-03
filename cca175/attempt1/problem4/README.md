@@ -1,11 +1,7 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 4: 
+Spark read from parquet file under path "/loudacre/accounts_parquet", orderBy last_name and save to /user/training/problem3/solution in text format as "last_name first_name" delimited by tab.
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+Read from parquet file on HDFS under path "/loudacre/accounts_parquet". Order records by last_name and save to /user/training/problem4/solution in text format as "last_name first_name" delimited by tab. No need to do secondary sort by first_name.
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+  * Save to directory "/user/training/problem4/solution".
+  * The output file should be in text format and delimited by tab. No compression is needed.
