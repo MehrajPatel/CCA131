@@ -1,11 +1,10 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 6: 
+Spark read from JSON, filter by column (state = 'CA') and write as avro file.
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+  * Read from json file in directory /loudacre/accounts_json.
+  * Filter the data by state = 'CA'.
+  * Write as avro file to directory /user/training/problem6/solution compressed by snappy. 
+
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+  * Save to directory /user/training/problem6/solution.
+  * File should be in Avro and compressed by snappy method.
