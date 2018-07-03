@@ -1,11 +1,11 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 2: 
+Sqoop export form tab ' \t' delimitered HDFS text file.
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
+Export text formatted data from HDFS to mysql table problem2.solution. The data on HDFS is under the path /loudacre/account-models and column delimitered by colon (':'). The target table in mysql is created with same fields for source data on HDFS.
 ### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+  * hostname: localhost
+  * username: training
+  * password: training
+  * table: problem2.solution
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+Export to MySql table problem2.solution.
