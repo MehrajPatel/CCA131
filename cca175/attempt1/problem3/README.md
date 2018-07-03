@@ -1,11 +1,6 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 3: 
+Spark Hive table to HDFS file with column select
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+Select columns "released" and "name" from metastore table "default.device" and save to files under "/user/training/problem3/solution". The output file is in parquet format with gizp compression method.
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+Save to directory "6d as gzip file.
