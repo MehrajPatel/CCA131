@@ -1,11 +1,8 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 9: 
+Spark SQL read from avro file and filter with some column, and then write to text with tab as delimiter
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+Read from JSON file on HDFS under path "/loudacre/accounts_avro". Count records group by state and name the count column to "account_count". The result should contain "account_count" and "state".
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+  * Save to directory "/user/training/problem9/solution".
+  * The output file should be in parquet format. No compression is needed.
+  * Spark SQL read from avro file and filter with some column, and then write to text with tab as delimiter
