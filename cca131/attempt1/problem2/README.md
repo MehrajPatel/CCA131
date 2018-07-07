@@ -1,11 +1,12 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 2: 
+Configure Yarn dynamic resource pool.
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+We would like to create a new queue to meet requirements for new type of applications.
+Add queue named test_queue and set
+  * Min Resource: 1 core, 1GB memory
+  * Max Resource: 3 core, 3GB memory
+  * Weight: 5
+  * Scheduling Policy: DRF
+  * Max Running Apps： 3
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+Queue should be added to Yarn with above configuration.
