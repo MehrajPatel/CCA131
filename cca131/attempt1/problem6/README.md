@@ -1,11 +1,6 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 6: 
+Enable trash on Cloudera Manager.
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+Yet we did not have trash on the cluster. Please enable trash through Cloudera Manager and set the time to keep trash file to 4 days.
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+Trash configuration set on Cloudera Manager.
