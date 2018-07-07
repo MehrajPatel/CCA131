@@ -1,11 +1,6 @@
 # Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+Download client configuration. 
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+Download client configuration from Cloudera Manager and save to local directory /home/cloudera/problem1/solution.
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+Save the configuration as its name unchanged to local dir /home/cloudera/problem1/solution.
