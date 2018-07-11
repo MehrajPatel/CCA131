@@ -5,4 +5,4 @@ Read from JSON file on HDFS under path "/loudacre/accounts_avro". Count records 
 ## Output: 
   * Save to directory "/user/training/problem9/solution".
   * The output file should be in parquet format. No compression is needed.
-  * Spark SQL read from avro file and filter with some column, and then write to text with tab as delimiter
+  * Spark SQL read from avro file and filter with some column, and then write as parquet file.
