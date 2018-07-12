@@ -10,11 +10,11 @@ sc.textFile("/user/training/problem1/solution/").count
 ### Run in mysql: 
 select count(*) from problem2.solution;
 ### Result:
-+----------+
-| count(*) |
-+----------+
-|   194764 |
-+----------+
++----------+  
+| count(*) |  
++----------+  
+|   194764 |  
++----------+  
 1 row in set (0.16 sec)
 
 Problem 3.
