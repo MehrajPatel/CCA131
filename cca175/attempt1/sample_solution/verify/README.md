@@ -7,8 +7,9 @@ sc.textFile("/user/training/problem1/solution/").count
 129761
 
 ## Problem 2. 
-Run in mysql: select count(*) from problem2.solution;
-Result:
+### Run in mysql: 
+select count(*) from problem2.solution;
+### Result:
 +----------+
 | count(*) |
 +----------+
