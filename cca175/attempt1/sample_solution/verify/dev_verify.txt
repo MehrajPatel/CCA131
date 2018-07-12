@@ -1,9 +1,12 @@
 Process to check:
 
-1. sc.textFile("/user/training/problem1/solution/").count
-129761
+Problem 1.
+Run in Spark: sc.textFile("/user/training/problem1/solution/").count
+Result: 129761
 
-2. mysql> select count(*) from problem2.solution;
+Problem 2. 
+Run in mysql: select count(*) from problem2.solution;
+Result:
 +----------+
 | count(*) |
 +----------+
@@ -11,8 +14,9 @@ Process to check:
 +----------+
 1 row in set (0.16 sec)
 
-3.
-[training@localhost scripts]$ hadoop fs -ls /user/training/problem3/solution/
+Problem 3.
+Run in terminal: hadoop fs -ls /user/training/problem3/solution/
+Result:
 Found 7 items
 -rw-rw-rw-   1 training supergroup          0 2018-07-10 20:06 /user/training/problem3/solution/_SUCCESS
 -rw-rw-rw-   1 training supergroup        332 2018-07-10 20:06 /user/training/problem3/solution/_common_metadata
@@ -22,10 +26,10 @@ Found 7 items
 -rw-rw-rw-   1 training supergroup        817 2018-07-10 20:06 /user/training/problem3/solution/part-r-00002-ccae6376-1000-4f27-a9df-5f30f3c8960a.gz.parquet
 -rw-rw-rw-   1 training supergroup        799 2018-07-10 20:06 /user/training/problem3/solution/part-r-00003-ccae6376-1000-4f27-a9df-5f30f3c8960a.gz.parquet
 
-scala> val data = sqlContext.read.parquet("/user/training/problem3/solution/")
-data: org.apache.spark.sql.DataFrame = [released: timestamp, name: string]      
-
-scala> data.show()
+Run in Spark:
+data = sqlContext.read.parquet("/user/training/problem3/solution/")
+data.show()
+Result:
 +--------------------+--------------------+
 |            released|                name|
 +--------------------+--------------------+
@@ -51,30 +55,13 @@ scala> data.show()
 |2012-07-21 00:00:...|           iFruit 3A|
 +--------------------+--------------------+
 only showing top 20 rows
+Run in Spark: data.count
+Result: res3: Long = 50  
 
-
-scala> data.count
-res3: Long = 50  
-
-4.
-[training@localhost scripts]$ hadoop fs -tail /user/training/problem4/solution/part-00000
-Jorge
-Zimmerman   Bernice
-Zimmerman   Edward
-Zimmerman   Linda
-Zimmerman   Dorothy
-Zimmerman   Joe
-Zimmerman   Elias
-Zimmerman   Christine
-Zimmerman   Jorge
-Zimmerman   Bernice
-Zimmerman   Edward
-Zimmerman   Linda
-Zimmermann  Troy
-Zimmermann  Ruth
-Zimmermann  Troy
-Zimmermann  Ruth
-Zinke   Eddy
+Problem 4.
+Run in terminal: hadoop fs -tail /user/training/problem4/solution/part-00000
+Sample Result:
+...
 Zinke   Glenn
 Zinke   Eddy
 Zinke   Glenn
@@ -83,170 +70,79 @@ Zinke   Glenn
 Ziolkowski  Heather
 Ziolkowski  Heather
 Ziolkowski  Heather
-Zito    Lynn
-Zito    Lynn
-Zoll    Kristen
-Zoll    Kristen
-Zoll    Kristen
-Zoller  Brittney
-Zoller  Brittney
-Zoller  Brittney
-Zollinger   Veronica
-Zollinger   Veronica
-Zollinger   Veronica
-Zook    Mark
-Zook    Angela
-Zook    Mark
-Zook    Trevor
-Zook    Angela
-Zook    Mark
-Zook    Trevor
-Zorn    Lyndia
-Zorn    Lyndia
-Zuber   Maria
-Zuber   Maria
-Zuber   Maria
-Zubia   Franklin
-Zubia   Jimmie
-Zubia   Franklin
-Zubia   Jimmie
-Zubia   Franklin
-Zubia   Jimmie
-Zuniga  George
-Zuniga  William
-Zuniga  Norma
-Zuniga  Robert
-Zuniga  George
-Zuniga  William
-Zuniga  Norma
-Zuniga  Robert
-Zuniga  George
-Zuniga  William
-Zuniga  Norma
-Zurita  Jacqueline
-Zurita  Jacqueline
-Zurita  Jacqueline
+...
 Zwick   Frederick
-Zwick   Frederick
-Zwick   Frederick
-[training@localhost scripts]$ hadoop fs -ls /user/training/problem4/solution/part-00000
--rw-rw-rw-   1 training supergroup    1818698 2018-07-10 20:20 /user/training/problem4/solution/part-00000
 
-scala> sc.textFile("/user/training/problem4/solution/").count
-res4: Long = 129761
+Run in Spark: sc.textFile("/user/training/problem4/solution/").count
+Result: res4: Long = 129761
 
-5.
-[training@localhost scripts]$ hadoop fs -tail /user/training/problem5/solution/part-00186
-Elizabeth Searle,224.137.50.248
-Elizabeth Searle,224.137.50.248
-Elizabeth Searle,224.137.50.248
-Elizabeth Searle,224.137.50.248
-Elizabeth Searle,47.149.168.153
-Elizabeth Searle,47.149.168.153
-Elizabeth Searle,250.27.42.136
-Elizabeth Searle,250.27.42.136
-Elizabeth Searle,226.65.80.234
-Elizabeth Searle,226.65.80.234
-Elizabeth Searle,180.155.3.204
-Elizabeth Searle,180.155.3.204
-Elizabeth Searle,99.200.250.13
-Elizabeth Searle,99.200.250.13
-Elizabeth Searle,33.105.149.112
-Elizabeth Searle,33.105.149.112
-Elizabeth Searle,33.105.149.112
-Elizabeth Searle,33.105.149.112
-Elizabeth Searle,212.91.194.246
+Problem 5.
+Run in terminal: hadoop fs -tail /user/training/problem5/solution/part-00186
+...
 Elizabeth Searle,212.91.194.246
 Elizabeth Searle,47.83.164.38
 Elizabeth Searle,47.83.164.38
-Elizabeth Searle,136.32.20.157
-Elizabeth Searle,136.32.20.157
-Elizabeth Fincher,157.209.115.119
-Elizabeth Fincher,157.209.115.119
-Elizabeth Fincher,157.209.115.119
-Elizabeth Fincher,157.209.115.119
-Elizabeth Fincher,82.184.100.105
-Elizabeth Fincher,82.184.100.105
+...
 Elizabeth Fincher,145.48.106.83
 Elizabeth Fincher,145.48.106.83
+Run in Spark: sc.textFile("/user/training/problem5/solution/").count
+Result: res5: Long = 1079891 
 
-scala> sc.textFile("/user/training/problem5/solution/").count
-res5: Long = 1079891 
-
-6.
-[training@localhost scripts]$ hadoop fs -ls /user/training/problem6/solutionFound 5 items
+Problem 6.
+Run in terminal: hadoop fs -ls /user/training/problem6/solutionFound 5 items
+Result:
 -rw-rw-rw-   1 training supergroup          0 2018-07-10 23:10 /user/training/problem6/solution/_SUCCESS
 -rw-rw-rw-   1 training supergroup        644 2018-07-10 23:10 /user/training/problem6/solution/part-r-00000-e98827d5-dd2f-4428-b035-fc9abcf23954.avro
 -rw-rw-rw-   1 training supergroup        644 2018-07-10 23:10 /user/training/problem6/solution/part-r-00001-e98827d5-dd2f-4428-b035-fc9abcf23954.avro
 -rw-rw-rw-   1 training supergroup        644 2018-07-10 23:10 /user/training/problem6/solution/part-r-00002-e98827d5-dd2f-4428-b035-fc9abcf23954.avro
 -rw-rw-rw-   1 training supergroup        644 2018-07-10 23:10 /user/training/problem6/solution/part-r-00003-e98827d5-dd2f-4428-b035-fc9abcf23954.avro
-hadoop fs -get /user/training/problem6/solution/part-r-00003-e98827d5-dd2f-4428-b035-fc9abcf23954.avro
-[training@localhost scripts]$ avro-tools getmeta part-r-00003-e98827d5-dd2f-4428-b035-fc9abcf23954.avro 
-log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
-log4j:WARN Please initialize the log4j system properly.
-log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
-avro.schema
+Run in terminal: hadoop fs -get /user/training/problem6/solution/part-r-00003-e98827d5-dd2f-4428-b035-fc9abcf23954.avro; avro-tools getmeta part-r-00003-e98827d5-dd2f-4428-b035-fc9abcf23954.avro 
+Result:
 {"type":"record","name":"topLevelRecord","fields":[{"name":"acct_close_dt","type":["long","null"]},{"name":"acct_create_dt","type":["long","null"]},{"name":"acct_num","type":["long","null"]},{"name":"address","type":["string","null"]},{"name":"city","type":["string","null"]},{"name":"created","type":["long","null"]},{"name":"first_name","type":["string","null"]},{"name":"last_name","type":["string","null"]},{"name":"modified","type":["long","null"]},{"name":"phone_number","type":["string","null"]},{"name":"state","type":["string","null"]},{"name":"zipcode","type":["string","null"]}]}
 avro.codec  snappy
-scala> sqlContext.read.format("com.databricks.spark.avro").load("/user/training/problem6/solution/").count
-res7: Long = 92416 
+Run in Spark: sqlContext.read.format("com.databricks.spark.avro").load("/user/training/problem6/solution/").count
+Result: res7: Long = 92416 
 
-7.
-[training@localhost scripts]$ hadoop fs -tail /user/training/problem7/solution/part-00003
-129750|2014-01-26 23:30:40.0|\N|Enrique|Thomas|3972 Benson Street|Fresno|CA
+Problem 7.
+Run in terminal: hadoop fs -tail /user/training/problem7/solution/part-00003
+Result:
+...
 129751|2014-02-02 16:00:18.0|\N|Sylvia|Boykin|1373 Green Hill Road|Santa Monica|CA
 129752|2014-02-15 22:36:02.0|\N|Gary|Johnson|4944 Laurel Lane|Santa Barbara|CA
 129753|2014-02-17 08:30:21.0|\N|Fernando|Tarrant|4395 Fulton Street|Anaheim|CA
 129754|2014-01-26 04:35:47.0|\N|Maria|Godoy|455 Hickman Street|Prescott|AZ
 129755|2014-01-06 16:11:39.0|2014-02-21 11:22:56.0|John|Hale|1718 Irish Lane|San Bernardino|CA
-129756|2014-01-26 19:34:06.0|\N|Danny|Graf|1104 Golden Ridge Road|San Jose|CA
-129757|2014-01-27 02:19:44.0|\N|John|McCall|4117 Conaway Street|Long Beach|CA
-129758|2014-03-14 20:25:15.0|\N|Robert|Pitt|2502 Heather Sees Way|Oakland|CA
-129759|2014-01-16 15:43:50.0|2014-02-19 07:31:53.0|Deborah|Hutchings|2071 Rodney Street|Globe|AZ
-129760|2014-01-06 04:24:56.0|\N|Zola|Tedder|1575 Linden Avenue|San Francisco|CA
+...
 129761|2014-01-05 16:23:40.0|\N|Ruth|Ebersole|4684 Irving Place|Klamath Falls|OR
-sc.textFile("/user/training/problem7/solution").count()
-Out[3]: 129762
+Run in Spark: sc.textFile("/user/training/problem7/solution").count()
+Result: Out[3]: 129762
 
-8.
-[training@localhost scripts]$ hadoop fs -tail /user/training/problem8/solution/part-00001
-193.34.153.109,2
+Problem 8.
+Run in terminal hadoop fs -tail /user/training/problem8/solution/part-00001
+...
 25.45.24.35,2
 145.83.182.82,2
-55.32.174.140,2
-112.239.183.78,2
-130.209.130.37,2
-133.6.237.188,2
-66.66.152.10,2
-219.34.110.96,2
-36.104.240.195,2
-25.69.177.48,2
-98.51.235.24,2
-194.136.244.83,2
-66.109.224.193,4
-222.130.24.184,2
-84.152.210.208,2
-39.92.203.138,2
-61.170.189.125,2
+...
 45.230.116.19,2
 148.13.211.103,2
 2.28.189.122,2
 160.126.236.46,2
 
-sc.textFile("/user/training/problem8/solution").count()
+Run in Spark: sc.textFile("/user/training/problem8/solution").count()
 474330
 
-9.
-hadoop fs -ls /user/training/problem9/solution
+Problem 9.
+Run in terminal: hadoop fs -ls /user/training/problem9/solution
 Found 203 items
 -rw-rw-rw-   1 training supergroup          0 2018-07-10 23:31 /user/training/problem9/solution/_SUCCESS
 -rw-rw-rw-   1 training supergroup        339 2018-07-10 23:31 /user/training/problem9/solution/_common_metadata
 -rw-rw-rw-   1 training supergroup       1259 2018-07-10 23:31 /user/training/problem9/solution/_metadata
 -rw-rw-rw-   1 training supergroup        339 2018-07-10 23:31 /user/training/problem9/solution/part-r-00000-0e1e9083-b73e-42a7-825b-10006e2bdc93.parquet
 -rw-rw-rw-   1 training supergroup        339 2018-07-10 23:31 /user/training/problem9/solution/part-r-00001-0e1e9083-b73e-42a7-825b-10006e2bdc93.parquet
-
-data = sqlContext.read.parquet("/user/training/problem9/solution")
-data.show()
+...
+Run in Spark: data = sqlContext.read.parquet("/user/training/problem9/solution")
+Run in Spark: data.show()
+Result:
 +-----+-------------+
 |state|account_count|
 +-----+-------------+
