@@ -1,11 +1,6 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 7: 
+Enable redaction on Cloudera Manager.
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+There is sensitive data on the cluster like credit card number and social security number (SSN). Please setup redaction on Cloudera Manager so that those information can be masked on logs. Note that credit card rules and SSN rules are both available on Cloudera Manager.
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+Correct redaction for credit card and SSN configuration on Cloudera Manager.

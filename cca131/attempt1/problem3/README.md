@@ -1,11 +1,11 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 3: 
+Increase NN memory by calculation
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+Suppose our master node has 31GB memory in total. We have zookeeper, namenode, secondary namenode, resourcemanager and job history on the host. We would ilke to change namenode heap size as large as possible to support more files stored on HDFS. Please consider the proper size for namenode memory. Note that actual memory usage is usually 1.3 times java heap size and namenode and secondary namenode should have the same java heap size.
+Memory usage consideration:
+  * Reserve 6.2 GB (20%) for system usage.
+  * 1 GB java heap size for zookeeper instance.
+  * 1 GB java heap size for resourcemanager instance.
+  * 1 GB java heap size for job historyserver instance.
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+Proper memory for namenode/secondary namenode on Cloudera Manager.

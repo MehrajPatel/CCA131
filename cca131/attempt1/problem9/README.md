@@ -1,11 +1,7 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 9: 
+Fix problem on MR jobs.
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+  * One of users reported job runing and face some errors. The user claims that the issue is not related to the coding or to the script. 
+  * The running script is places under /home/cloudera/problem9/. Please re-run the script and fix problems for the job. Note that there is no logic errors in the program and no need to change the script.
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+Fix running problem for the job.

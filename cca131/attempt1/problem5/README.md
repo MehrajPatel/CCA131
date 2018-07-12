@@ -1,11 +1,6 @@
-# Problem 1: 
-Sqoop import from mysql, save as ',' delimitered text on HDFS
+# Problem 5: 
+Restore snapshot files
 ## Description
-Import table loudacre.accounts from mysql to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields).  
-### MySQL information:  
-  * hostname: localhost  
-  * username: training  
-  * password: training  
-  * table: loudacre.accounts  
+One of the user mistakenly deleted file under /user/cloudera/problem5/solution. Now there's just one empty file under the directory. We did not enable trash before the deletion so there is no trash to recover. However, snapshot has been abled for the folder. Please recover the file from snapshot. Note that there are several snapshots so the one with the largest sequence number is the most recent one. And the recovered file should have original user permission, ACL, timestamp.
 ## Output: 
-Save to HDFS dir "/user/training/problem1/solution" with default delimiter (Comma splited fields) and uncompressed.
+Store the recovered file under /user/cloudera/problem5/solution/solution.
