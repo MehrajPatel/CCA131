@@ -1,8 +1,10 @@
-Process to check:
+# Process to check:
 
-Problem 1.
-Run in Spark: sc.textFile("/user/training/problem1/solution/").count
-Result: 129761
+## Problem 1.
+### Run in Spark: 
+sc.textFile("/user/training/problem1/solution/").count
+### Result: 
+129761
 
 Problem 2. 
 Run in mysql: select count(*) from problem2.solution;
